@@ -1,0 +1,441 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap');
+body{    
+font-family: 'Nunito', sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+font-family: 'Montserrat', sans-serif;
+}
+:root{
+--main-color:#E65F78;
+}
+html{
+    scroll-padding-top: 54px;
+}
+/* imp */
+.setting{
+    position: fixed;
+    left: 0;
+    top: 30%;
+    color: #fff;
+    background-color:#7777;
+    padding: 4px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    z-index: 9999;
+}
+.arrow{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    color: #fff;
+    background-color: var(--main-color);
+    z-index: 999;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* ---------------------------- */
+.navbar a{
+font-family: 'Montserrat', sans-serif;}
+.navbar .nav-link{
+transition: all 500ms;
+}    
+.navbar-nav .nav-link.active,.navbar-nav .nav-link:hover{
+color: var(--main-color);
+}
+.home{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) ,url(../images/header-bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+   
+}
+.home .container{
+    padding-top: 54px;
+}
+.home-content a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border: solid 2px #fff;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 500ms;
+}
+.home-content a:hover{
+    color: #000;
+    background-color: #fff;
+}
+.suptitle{
+    max-width: 500px;
+}
+/* scroll animation */
+.scroll{
+    width: 25px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 40px;
+    z-index: 666;
+    border: 2px solid white ;
+    border-radius: 50px;
+    animation: bonce 1s infinite ease-in-out;
+}
+@keyframes bonce{
+    0%{
+        bottom: 40px;
+    }
+  
+    50%{
+        bottom: 60px;
+    }
+   
+    100%{
+        bottom: 40px;
+    }
+}
+.scroll::after{
+    content: "";
+    width: 4px;
+    height: 15px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translatex(-50%);
+    background-color: #fff;
+}
+/* about */
+.maincolor{
+    color: var(--main-color);
+}
+.icon i{
+    width: 35px;
+    height: 35px;
+    border: solid 2px gray;
+    border-radius: 50%;
+    cursor: pointer;
+display: inline-flex;
+justify-content: center;
+align-items: center;
+transition: all 0.3s;
+  
+}
+.icon i:hover{
+    color: var(--main-color) !important;
+    border-color: var(--main-color);
+}
+/* services */
+.services{
+    background-color: #eee;
+}
+.services-box i{
+    color: var(--main-color);
+}
+.services-box h2{
+    position: relative;
+    overflow: hidden;
+}
+.services-box h2::after{
+    content: "";
+    background-color: var(--main-color);
+    width: 20%;
+    height: 4px;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    bottom: 0;
+    transition: all 0.4s;
+}
+.services-box:hover h2::after{
+    width: 40%;
+}
+/* our portfolio */
+.nav-tabs .nav-link{
+    margin-bottom: 0;
+    border: none;
+    color:#000;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+.nav-tabs{
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+}
+.nav-tabs .nav-link.active,.nav-tabs .nav-link:hover{
+    color:#fff ;
+    background-color: var(--main-color);
+    border-radius: 50px;
+}
+.portfolio-box{
+   overflow: hidden;
+    position: relative;
+}
+.portfolio-box .layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(0, 0, 0, 0.851);
+    opacity: 0;
+    transition: all 0.3s;
+}
+.layer .content-layer{
+    position: absolute;
+    top: 100%;
+    transition: all 0.4s;
+}
+.portfolio-box:hover .layer{
+    opacity: 1;
+}
+.portfolio-box:hover .content-layer{
+    top: 50%;
+    transform: translateY(-50%);
+}
+/* section clint */
+.carousel-indicators [data-bs-target]{
+    background-color: var(--main-color);
+    width: 20px;
+    height: 5px;
+    border-radius: 5px;
+}
+.clint .carousel-indicators .active{
+    width: 35px;
+}
+.clint{
+    background-color: #eee;
+}
+.clint-feedback i{
+    font-size: 60px;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+.img-clint{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+}
+.suptitlep{
+    max-width: 600px;
+}
+/* contact */
+.contact{
+    background-color: #eee;
+}
+.form-control{
+    padding: 0.5rem 0.5rem;
+}
+.btn-contact{
+    color: #fff;
+    background-color: var(--main-color);
+    padding: 15px 20px;
+    border: none;
+    font-weight: bold;
+   float: right;
+   transition: all 0.3s;
+}
+.btn-contact:hover{
+    background-color: #d33d58;
+    color: #fff;
+}
+/* animation typing */
+.home .container h1::after{
+  content: "|";
+  animation: typing infinite 10s linear;
+}
+@keyframes typing{
+    0%{
+        content: "|";
+    }
+    0.9%{
+        content: "M|";
+    }
+    1.8%{
+        content: "Mo|";
+    }
+    2.7%{
+        content: "Moh|";
+    }
+    3.6%{
+        content: "Moha|";
+    }
+    4.5%{
+        content: "Moham|";
+    }
+    5.4%{
+        content: "Mohame|";
+    }
+    6.3%{
+        content: "Mohamed|";
+    }
+    7.2%{
+        content: "Mohamed |";
+    }
+    8.1%{
+        content: "Mohamed s|";
+    }
+    9%{
+        content: "Mohamed sa|";
+    }
+    9.9%{
+        content: "Mohamed sam|";
+    }
+    10.8%{
+        content: "Mohamed samy|";
+    }
+    21%{
+        content: "Mohamed samy|";
+    }
+    21.9%{
+        content: "Mohamed sam|";
+    }
+    22.8%{
+        content: "Mohamed sa|";
+    }
+    23.7%{
+        content: "Mohamed s|";
+    }
+    24.6%{
+        content: "Mohamed |";
+    }
+    25.5%{
+        content: "Mohamed|";
+    }
+    26.4%{
+        content: "Mohame|";
+    }
+    27.3%{
+        content: "Moham|";
+    }
+    28.2%{
+        content: "Moha|";
+    }
+    29.1%{
+        content: "Moh|";
+    }
+    30%{
+        content: "Mo|";
+    }
+    30.9%{
+        content: "M|";
+    }
+    31.8%{
+        content: "|";
+    }
+    33.2%{
+        content: "D|";
+    }
+    34.6%{
+        content: "De|";
+    }
+    36%{
+        content: "Des|";
+    }
+    37.4%{
+        content: "Desi|";
+    }
+    38.8%{
+        content: "Desig|";
+    }
+    40.2%{
+        content: "Design|";
+    }
+    41.6%{
+        content: "Designe|";
+    }
+    43%{
+        content: "Designer|";
+    }
+    53%{
+        content: "Designer|";
+    }
+    54.4%{
+        content: "Designe|";
+    }
+    55.8%{
+        content: "Design|";
+    }
+    57.2%{
+        content: "Desig|";
+    }
+    58.6%{
+        content: "Desi|";
+    }
+    60%{
+        content: "Des|";
+    }
+    61.4%{
+        content: "De|";
+    }
+    62.8%{
+        content: "D|";
+    }
+    64.2%{
+        content: "|";
+    }
+    65.4%{
+        content: "D|";
+    }
+    66.6%{
+        content: "De|";
+    }
+    67.8%{
+        content: "Dev|";
+    }
+    69%{
+        content: "Deve|";
+    }
+    70.2%{
+        content: "Devel|";
+    }
+    71.4%{
+        content: "Develo|";
+    }
+    72.6%{
+        content: "Develop|";
+    }
+    73.8%{
+        content: "Develope|";
+    }
+    75%{
+        content: "Developer|";
+    }
+    76.2%{
+        content: "Developer|";
+    }
+    86.2%{
+        content: "Developer|";
+    }
+    86.2%{
+        content: "Develope|";
+    }
+    87.4%{
+        content: "Develop|";
+    }
+    88.6%{
+        content: "Develo|";
+    }
+    89.8%{
+        content: "Devel|";
+    }
+    91%{
+        content: "Deve|";
+    }
+    93.2%{
+        content: "Dev|";
+    }
+    94.4%{
+        content: "De|";
+    }
+    95.6%{
+        content: "De|";
+    }
+    98.2%{
+        content: "D|";
+    }
+    100%{
+        content: "|";
+    }
+}
